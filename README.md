@@ -37,16 +37,16 @@ Make sure you have the following installed:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/social-media-app
-   cd social-media-app/backend
+   git clone https://github.com/harshanandini/social-media-app
+   cd social-media-app/server
    ```
 
 2. **Configure the database:**
    Open `application.properties` in the `src/main/resources` folder and configure your PostgreSQL connection:
    ```properties
    spring.datasource.url=jdbc:postgresql://localhost:5432/your-database
-   spring.datasource.username=your-username
-   spring.datasource.password=your-password
+   spring.datasource.username=<your-username>
+   spring.datasource.password=<your-password>
    ```
 
 3. **Build and run the backend:**
@@ -60,7 +60,7 @@ Make sure you have the following installed:
 
 1. **Navigate to the frontend folder:**
    ```bash
-   cd ../frontend
+   cd ../client
    ```
 
 2. **Install dependencies:**
