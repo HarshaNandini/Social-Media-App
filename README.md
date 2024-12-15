@@ -1,110 +1,52 @@
 # Harsha's Social Media App
 
-A full-stack social media app built with Spring Boot and React. This project allows users to share posts, comment on posts, and manage profiles, showcasing a simple and scalable architecture.
+A full-stack social media app built with Node, Express, Angular, and MySQL. This project allows users to share posts, comment on posts, and manage profiles, showcasing a simple and scalable architecture.
 
-## Table of Contents
-
-- [Tech Stack](#tech-stack)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [API Usage](#api-usage)
 
 ## Tech Stack
 
-- **Frontend:** React, Chakra UI (for design components)
-- **Backend:** Java, Spring Boot (for REST APIs), PostgreSQL (for database)
+- **Frontend:** Angular
+- **Backend:** NodeJS, ExpressJS
+- **Database:** MySQL (for database)
 
-## Features
+Run following command:
 
-- User registration and authentication
-- Create, read, update, and delete posts
-- Add comments to posts
-- View and update user profiles
-- Responsive design with Chakra UI
+>npm install
 
-## Getting Started
+That installs dependencies requierd in node_modules folder.
+___
 
-Follow these steps to get the app running locally.
+## CLIENT
 
-### Prerequisites
+Start client:
+>npm start
 
-Make sure you have the following installed:
-- **Node.js** (for the React frontend)
-- **Java** (for the Spring Boot backend)
-- **PostgreSQL** (for the database)
+link: https://localhost:4200
 
-### Backend Setup (Spring Boot)
+After you are done developing client, use following command to make build so you can try it on your local network.
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/harshanandini/social-media-app
-   cd social-media-app/server
-   ```
+>npm run build
 
-2. **Configure the database:**
-   Open `application.properties` in the `src/main/resources` folder and configure your PostgreSQL connection:
-   ```properties
-   spring.datasource.url=jdbc:postgresql://localhost:5432/your-database
-   spring.datasource.username=<your-username>
-   spring.datasource.password=<your-password>
-   ```
+That compiles all client code to one html and four js files that our server is going to serve.
 
-3. **Build and run the backend:**
-   ```bash
-   ./mvnw spring-boot:run
-   ```
+And after build new changes will be availible on you local network.
 
-   The backend will run at `http://localhost:8080`.
+___
 
-### Frontend Setup (React)
+## SERVER
+Start server:
 
-1. **Navigate to the frontend folder:**
-   ```bash
-   cd ../client
-   ```
+Link will be logged in console after you start it, that will look like next two following lines.
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+Server starting...
 
-3. **Run the frontend:**
-   ```bash
-   npm start
-   ```
+Listening at 100.103.0.120:3000
 
-   The frontend will run at `http://localhost:3000`.
+>npm run serve
 
-### Database Setup
+After starting server, you can visit app on https://localhost:4200 from Angular server that has proxy to our coded server.
 
-1. **Create the database:**
-   In PostgreSQL, create a database for your app:
-   ```sql
-   CREATE DATABASE social_media_db;
-   ```
+___
 
-2. **Migrate tables:**
-   The app will automatically set up tables when you start the backend.
-
-## API Usage
-
-After starting the backend, you can make API requests to interact with the app. Here's how you can use the API endpoints:
-
-### Sample Requests:
-
-1. **List all posts:**
-   ```bash
-   GET https://localhost:8080/api/posts/getall
-   ```
-
-2. **List comments by post:**
-   ```bash
-   GET https://localhost:8080/api/comments/getallbypost/{postId}
-   ```
-
-3. **User registration:**
-   ```bash
-   POST https://localhost:8080/api/auth/register
-   ```
-
-For more API details, refer to the Java controller classes in the `backend/src/main/java/com/yourapp/controllers` folder.
+## DATABASE
+Database is MySQL, and for this application I used XAMP. Install it and create database named "social_media". 
