@@ -1,0 +1,16 @@
+<div class="wrapper-user-post-owner">
+
+    <div (click)="goToUserProfile()" class="img-container clickable">
+        <img *ngIf="user_image_url" class="user-post-owner-img" src={{user_image_url}} alt="">
+    </div>
+
+    <div class="user-data-container">
+            <mat-label (click)="goToUserProfile()" class="clickable">{{postData.firstname}} {{postData.lastname}}</mat-label>
+        <br>
+        <mat-label>{{ postData.date_of_creation | date:"EEEE, MMMM d, y, H:mm:ss" }}</mat-label>
+    </div>
+
+    <div class="post-options-menu" >
+        <mat-icon *ngIf="canDeletePost" (click)="deletePost()">delete</mat-icon>
+    </div>
+</div>

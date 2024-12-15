@@ -1,0 +1,13 @@
+<mat-card class="wrapper-user-photos">
+    <div>
+
+
+        <app-image-uploader *ngIf="userOwnsProfile" [userData]="userData" ></app-image-uploader>
+
+    </div>
+    <div class="user-photos-container">
+        <div *ngFor="let imageData of userImageList" class="image-container">
+            <app-image-preview-thumbnail [userOwnsProfile]="userOwnsProfile" [imageList]="userImageList"  [imageData]="imageData"></app-image-preview-thumbnail>
+        </div>
+    </div>
+</mat-card>

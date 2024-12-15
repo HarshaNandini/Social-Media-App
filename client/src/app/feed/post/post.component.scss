@@ -1,0 +1,84 @@
+.wrapper-post{
+    margin-bottom: 20px;
+    box-shadow: 0 0 1px 1px gray;
+    border-radius: 4px;
+
+    mat-card-title{
+        margin-top: 10px;
+    }
+
+    .like-btn-container{
+        padding: 10px 0;
+        &>button{
+            margin-right: 15px;
+        }
+    }
+
+    .like-link{
+        display: inline-block;
+        cursor: pointer;
+
+        &:hover{
+            color: var(--accent-color);
+        }
+    }
+
+    .like-btn{
+        box-shadow: 0 0 1px 1px gray !important;
+        &:hover{
+            color: var(--accent-color);
+        }
+    }
+
+    .postIsLiked{        
+        box-shadow: none !important;
+        background-color: var(--primary-color);
+        color: var(--background-color);
+    }
+
+    .input-form {
+        min-width: 150px;
+        max-width: 500px;
+        width: 100%;
+    }
+  
+    .input-full-width {
+        width: 100%;
+    }
+
+
+    .flex{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .comments-wrapper{
+        max-height: 500px;
+        overflow-y: auto;
+
+        .comment-container{
+            margin: 10px;
+        }
+    }
+
+    mat-panel-description{
+        padding: 0 15px;
+    }
+
+    .no-comment-message{
+        padding: 0 15px;
+    }
+
+
+
+    mat-expansion-panel{
+        //background-color: var(--status-bar-color) !important;
+        background-color: gray !important;
+    }
+
+
+}
+
+::ng-deep .mat-expansion-panel-body{
+    padding: 0 !important;
+}

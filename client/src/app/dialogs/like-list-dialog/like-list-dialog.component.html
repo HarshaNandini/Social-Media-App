@@ -1,0 +1,19 @@
+<div class="wrapper-like-list" [ngClass]="{'dark-theme' : darkMode, 'light-theme': !darkMode}">
+    
+    <mat-card class="like-list-container">
+        <div class="close-btn">
+            <mat-icon color="primary" (click)="closeLikeList()">cancel</mat-icon>
+        </div>
+        
+        <!--
+            <mat-label>{{postData.firstname}} {{postData.lastname}}</mat-label>
+            <mat-card-title>{{postData.post_text}}</mat-card-title>
+        -->
+        <div class="user-list">
+            <div  *ngFor="let profileUserData of likeList">
+                <app-user-snackbar (click)="closeLikeList()" [userData]="null"  [profileUserData]="profileUserData"></app-user-snackbar>
+            </div>
+        </div>
+    </mat-card>
+
+    </div>

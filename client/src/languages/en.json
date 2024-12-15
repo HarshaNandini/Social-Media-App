@@ -1,0 +1,114 @@
+{
+    "components": {
+        "login": {
+            "title": "Login",
+            "hasNoAccount":"Don't have account",
+            "buttons":{
+                "login": "Login"
+            }
+        },
+        "register": {
+            "title": "Register",
+            "hasAccount":"Have account",
+            "buttons":{
+                "register": "Register"
+            }
+        },
+        "feed":{
+            "postPlaceholder": "Write a Post here...",
+            "postBtn": "Post"
+        },
+        "userProfile":{
+            "buttons":{
+                "sendMessage":"Send message",
+                "add": "Add",
+                "posts": "Posts",
+                "info": "Info",
+                "photos": "Photos",
+                "friends": "Friends"
+            }
+        },
+        "post": {
+            "like":{
+                "likePostBtn": "Like",
+                "oneLike": "Like",
+                "moreLikes":"Likes",
+                "noLike": "No likes so far..."
+            },
+            "comment":{
+                "show":"Show",
+                "comment":"comment.",
+                "comments": "comments.",
+                "postCommentPlaceholder": "Write Comment here...",
+                "postCommentBtn": "Post Comment",
+                "noCommentsYet": "No comments yet...",
+                "sorryNoComment": "Sorry this post isn't commented yet, be first to write a comment!",
+                "addComment": "Add Comment",
+                "hideComments":"Hide comments."
+            }
+        },
+
+        "userInfo":{
+            "title":"Info"
+        },
+        "userPhotos":{
+            "title":"Photos"
+        },
+        "userFriends":{
+            "title": "Friends"
+        }
+
+
+
+    },
+    "common":{
+        "user":{
+            "firstname": "Firstname",
+            "firstnamePlaceholder":"Enter Firstname",
+
+            "lastname": "Lastname",
+            "lastnamePlaceholder":"Enter Lastname",
+
+            "email": "E-mail",
+            "emailPlaceholder":"Enter E-mail",
+
+            "username": "Username",
+            "usernamePlaceholder": "Enter Username",
+
+            "password": "Password",
+            "oldPassword": "Old Password",
+            "newPassword": "New Password",
+            "passwordPlaceholder": "Enter Password",
+
+            "confirmPassword": "Confirm Password",
+            "confirmNewPassword": "Confirm New Password",
+            "confirmPasswordPlaceholder": "Confirm Password",
+
+
+
+
+            "errorMessages": {
+                "firstnameIsRequired": "Firstname is required!",
+                "lastnameIsRequired": "Lastname is required!",
+                "emailIsRequired": "E-mail is required!",
+                "usernameIsRequired": "Username is required!",
+                "passwordIsRequired": "Password is required!",
+                "confirmPasswordIsRequired": " Confirm password is required!",
+
+                    "isRequired": " is required!",
+                    "minlength3": "Length must be 3 characters or more.",
+                    "minlength4": "Length must be 4 characters or more.",
+                    "minlength6": "Length must be 6 characters or more.",
+                    "passwordsDontMatch": "Passwords does not match.",
+                    "wrongCredentials": "Wrong credentials, try again.",
+                    "wrongPassword": "Wrong password, try again.",
+                    "invalidEmail": "Invalid email format."
+                
+            }
+        },
+        "language":{
+            "selectedLanguage":"ENG"
+        }
+    }
+
+}

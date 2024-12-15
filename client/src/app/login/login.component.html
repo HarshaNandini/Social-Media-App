@@ -1,0 +1,67 @@
+<div class="wrapper-login" [ngClass]="{'dark-theme' : darkMode, 'light-theme': !darkMode}">
+
+    
+
+        <div class="nav-bar">
+            <button  mat-button [matMenuTriggerFor]="language">
+                {{'common.language.selectedLanguage' | translate}}
+            </button>
+            <mat-menu #language="matMenu">
+                <button  mat-menu-item (click)="setLanguage('en')">
+                    ENG
+                </button>
+                <button  mat-menu-item (click)="setLanguage('sr')">
+                    SRB
+                </button>
+            </mat-menu>
+            
+            <button mat-button (click)="toggleDarkMode()">
+                <mat-icon>dark_mode</mat-icon>
+                <span *ngIf="!darkMode">Dark mode</span>
+                <span *ngIf="darkMode">Light mode</span>
+            </button>
+        </div>
+    
+
+    <mat-card>
+        <mat-card-title>{{"components.login.title" | translate}}</mat-card-title>
+            
+            <form [formGroup]="loginForm">
+                <div>
+                    <mat-form-field>
+                        <mat-label>{{"common.user.username" | translate}}</mat-label>
+                        <input id="username" formControlName="username" matInput placeholder='{{"common.user.usernamePlaceholder" | translate}}'/>
+                        <mat-error *ngIf='loginForm.controls.username.hasError("required")'
+                        >{{"common.user.errorMessages.usernameIsRequired" | translate}}</mat-error>
+                        <mat-error *ngIf='loginForm.controls.username.hasError("minlength")'
+                        >{{"common.user.errorMessages.minlength4" | translate}}</mat-error>
+                        <mat-error *ngIf='loginForm.controls.username.hasError("wrongCredentials")'
+                        >{{"common.user.errorMessages.wrongCredentials" | translate}}</mat-error>
+                    </mat-form-field>
+                </div>
+                
+                <div>
+                    <mat-form-field>
+                        <mat-label>{{"common.user.password" | translate}}</mat-label>
+                        <input id="password" formControlName="password" [type]="hidePassword ? 'password' : 'text'" matInput placeholder='{{"common.user.passwordPlaceholder" | translate}}'/>                  
+                        <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        <mat-error *ngIf='loginForm.controls.password.hasError("required")'
+                        >{{"common.user.errorMessages.passwordIsRequired" | translate}}</mat-error>                  
+                        <mat-error *ngIf='loginForm.controls.password.hasError("minlength")'
+                        >{{"common.user.errorMessages.minlength6" | translate}}</mat-error>
+                        <mat-error *ngIf='loginForm.controls.password.hasError("wrongPassword")'
+                        >{{"common.user.errorMessages.wrongPassword" | translate}}</mat-error>
+                        <mat-error *ngIf='loginForm.controls.password.hasError("wrongCredentials")'
+                        >{{"common.user.errorMessages.wrongCredentials" | translate}}</mat-error>
+                    </mat-form-field>
+                </div>
+            </form>
+            <div>
+                <button id="loginBtn" (click)="submitForm()" mat-raised-button color="primary" [disabled]=!loginForm.valid>{{"components.login.buttons.login" | translate}}</button>
+            </div>
+
+            <p>{{"components.login.hasNoAccount" | translate}}<a class="register-btn" routerLink="/register">{{"components.register.title" | translate}}</a></p>
+            
+        </mat-card>
+
+</div>

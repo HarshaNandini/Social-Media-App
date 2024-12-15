@@ -1,70 +1,27 @@
+# Harsha's SocialMediaApp Frontend
 
-# Getting Started with Harsha's Social Media App Frontend
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses Chakra UI for the design components.
+## Development server
 
-## Table of Contents
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-- [Available Scripts](#available-scripts)
-- [Project Setup](#project-setup)
-- [Learn More](#learn-more)
+## Code scaffolding
 
-## Available Scripts
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-In the project directory, you can run the following commands:
+## Build
 
-### `npm start`
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-Runs the app in development mode.Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Running unit tests
 
-The page will reload when you make changes.You may also see any lint errors in the console.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-### `npm test`
+## Running end-to-end tests
 
-Launches the test runner in interactive watch mode.For more information on running tests, see the [testing documentation](https://facebook.github.io/create-react-app/docs/running-tests).
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-### `npm run build`
+## Further help
 
-Builds the app for production to the `build` folder.It bundles React in production mode and optimizes the build for best performance.
-
-The build is minified and filenames include hashes.The app is ready to be deployed!
-
-For more details, see the [deployment documentation](https://facebook.github.io/create-react-app/docs/deployment).
-
-### `npm run eject`
-
-**Note: This is a one-way operation. Once you `eject`, you cannot go back!**
-
-This command copies all the configuration files and dependencies (e.g., Webpack, Babel, ESLint) into your project so you have full control over them. It allows you to customize the build process.
-
-## Project Setup
-
-### 1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/social-media-app-frontend.git
-cd social-media-app/frontend
-```
-
-### 2. Install dependencies:
-
-```bash
-npm install
-```
-
-### 3. Start the development server:
-
-```bash
-npm start
-```
-
-The app will be running at `http://localhost:3000`.
-
-## Learn More
-
-To learn more about using Create React App, visit the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn more about React, visit the [React documentation](https://reactjs.org/).
-
-For Chakra UI components and design documentation, visit [Chakra UI](https://chakra-ui.com/).
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

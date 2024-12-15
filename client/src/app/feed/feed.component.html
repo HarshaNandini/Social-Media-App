@@ -1,0 +1,21 @@
+
+<div class="wrapper-feed">
+
+    
+    <mat-card class="center post-container" (keyup)="createPost($event)">
+          
+            <form [formGroup]="postForm" class="input-form">
+                <mat-form-field floatLabel="never" class="input-full-width">
+                    <input id="postInput" formControlName="post" matInput placeholder='{{"components.feed.postPlaceholder" | translate}}'/>
+                </mat-form-field>
+            </form>
+
+    </mat-card>          
+            
+
+    <div class="center post-list">
+            <div  *ngFor="let postData of allPosts">
+                <app-post [userData]="userData" [postData]="postData"></app-post>
+            </div>
+    </div>
+</div>

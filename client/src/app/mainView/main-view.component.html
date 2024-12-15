@@ -1,0 +1,33 @@
+<div class="wrapper-main-view" [ngClass]="{'dark-theme custom-backround-dark' : darkMode, 'light-theme custom-backround-light': !darkMode}">
+
+    <div class="main-view" *ngIf="!tokenError">
+        <div class="navigation">
+            <app-navigation></app-navigation>
+        </div>
+        <div class="content">
+           
+            <app-aside class="extras"></app-aside>
+
+            <div class="feed">
+                <app-feed [userData]="userData"></app-feed>
+            </div>
+            
+            <div class="chat">
+                <app-chat [userData]="userData"></app-chat>
+            </div>
+      
+        </div>
+
+    </div>
+    
+    
+    
+
+
+
+
+    <div *ngIf="tokenError">
+        <h2>Token error, please login</h2>
+        <a routerLink="/login">Go to Login</a>
+    </div>
+</div>
